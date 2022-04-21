@@ -7,7 +7,7 @@ export default function Work(props) {
                 <input type="text" onChange={(e) => props.handleChange(e)} placeholder="Employer" name="employer" value={props.employer} />
                 <input type="text" onChange={(e) => props.handleChange(e)} placeholder="From" name="jobStartDate" value={props.jobStartDate}/>
                 <input type="text" onChange={(e) => props.handleChange(e)} placeholder="To" name="jobEndDate" value={props.jobEndDate} />
-                <textarea name="description" placeholder="Your responsibilities and main activities" vaue={props.description} onChange={(e) => props.handleChange(e)}></textarea>
+                <textarea name="description" placeholder="Your responsibilities and main activities" value={props.description} onChange={(e) => props.handleChange(e)}></textarea>
             </div>}
             {props.preview && <div className="work">
                 <p className="occupation">{props.job.toUpperCase()}</p>
