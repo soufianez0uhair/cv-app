@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cv-app/static/css/main.34fa96d4.css",
+    "main.js": "/cv-app/static/js/main.877da250.js",
+    "index.html": "/cv-app/index.html",
+    "main.34fa96d4.css.map": "/cv-app/static/css/main.34fa96d4.css.map",
+    "main.877da250.js.map": "/cv-app/static/js/main.877da250.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34fa96d4.css",
+    "static/js/main.877da250.js"
+  ]
+}
