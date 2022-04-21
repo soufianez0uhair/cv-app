@@ -1,13 +1,172 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+header {
+  padding: 2rem;
+  background: #075985;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+.infos {
+  padding: 0 5rem;
+  background: rgb(39, 35, 35);
+  padding-bottom: 2rem;
+  min-height: calc(100vh - 9rem)
+}
+
+.section {
+  width: 100%;
+}
+
+.heading{
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: .1rem solid gray;
+  padding: 1rem 0;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+input, textarea {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+input {
+  flex-basis: 45%;
+  outline: none;
+}
+
+textarea {
+  flex-basis: 94%;
+  height: 10rem;
+}
+
+.generalInfo, .education, .work {
+  color: #fff;
+}
+
+.name {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.email {
+  font-size: 1.4rem;
+}
+
+.phone {
+  color: #fff;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.qualification {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.organization {
+  font-size: 1.5rem;
+  margin: .5rem 0;
+}
+
+.date {
+  font-size: 1.3rem;
+}
+
+.occupation {
+  font-size: 2rem;
+}
+
+.employer {
+  margin: .5rem 0;
+  font-size: 1.5rem;
+}
+
+.description {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  width: 80%;
+  word-wrap: break-word;
+}
+
+.btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  background: #075985;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  background: gray;
+}
+
+.icon--github {
+  transition: transform .3s ease;
+}
+.icon--github:hover {
+  font-size: 2rem;
+  transform: rotate(60deg) scale(1.2)
+}
+
+@media (max-width: 1000px) {
+  .description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 57%;
+  }
 }

@@ -1,23 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+import Header from './components/Header'
+import GeneralInfo from './components/GeneralInfo'
+import Education from './components/Education'
+import Work from './components/Work'
+import Footer from './components/Footer'
 
 function App() {
+  const [info, setInfo] = useState({
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      qualification: '',
+      school: '',
+      schStartDate: '',
+      schEndDate: '',
+      job: '',
+      employer: '',
+      jobStartDate: '',
+      jobEndDate: '',
+      description: ''
+  })
+  
+  const [preview, setPreview] = useState(false)
+
+  function handleChange(e) {
+    const {name, value} = e.target;
+    setInfo(prevInfo => {
+      return {
+        ...prevInfo,
+        [name]: value
+      }
+    })
+  }
+
+  function handleClick() {
+    setPreview(preview => !preview)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="infos">
+        <GeneralInfo {...info} handleChange={handleChange} preview={preview} />
+        <Education {...info} handleChange={handleChange} preview={preview} />
+        <Work {...info} handleChange={handleChange} preview={preview} />
+        <div className="btn">
+          <button onClick={handleClick}>{preview ? 'Edit' : 'preview'}</button>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
